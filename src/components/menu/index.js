@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Logo from '../../assets/images/logo.png'
 
@@ -9,11 +10,11 @@ import './menu.css'
 function Menu() {
     return (
         <nav className="Menu">
-            <a href="/">
+            <Link to="/">
                 <img src={Logo} className="Logo" alt="LiraFlix Logo" />
-            </a>
+            </Link>
 
-            <Button as="a" className="ButtonLink" href="/">
+            <Button as={Link} className="ButtonLink" to="/cadastro/video">
               Novo Vídeo
             </Button>
         </nav>
